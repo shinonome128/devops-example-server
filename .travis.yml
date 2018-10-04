@@ -1,4 +1,10 @@
-#!/bin/sh
-
-chmod 0600 id_rsa
-scp -q -o "StrictHostKeyChecking no" -i id_rsa *.php root@$REMOTE_HOST:/var/www/html/
+language: php
+script:
+- echo "Start CI"
+deploy:
+  provider: script
+  script:
+  - bash deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
