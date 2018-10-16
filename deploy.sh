@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# hoge
+
 # chmod 0600 id_rsa
 chmod 0600 identity
 # scp -q -o "StrictHostKeyChecking no" -i id_rsa *.php root@$REMOTE_HOST:/var/www/html/
