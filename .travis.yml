@@ -8,3 +8,9 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+env:
+  global:
+    secure: oVvqTEjTdkg06sKWrkKFezPDQ4TtUL6K+1IxBMzBlLkr0Oxly34dp8usZvWeWVf+U7nzFShBtPrk28qE10Y9j2mB1bYUHtlnaTY0g1lV1JoRxhD4bId9Rcuq0Qn3cDmCgk1kuk1saeMIHP7+iRmmZNsOyvhhQrrlWzxMJpwIpUTEHsKZFkrj44sVqkJmXz/4g/7kLb35GcfkdsPbifv+J425XyYuqf2Lu/XOxhQZsfrh2k8zXsUprI0RpBPunAjQhYIqtHLoVvbRvr7Dx0bNU3i6TzoWm0Yw0k7HCj0+Y9MqctsA3ir5bZAePhQa+1iMpR++M8WdhaMCYkuhlgp8gYCDilnHEVI1Ay7L+PEwnHQRqafOWI3g9+xMI1DQ8V/RbIzr8qSw8qD9vBgvx9OK+JoYszK8P5Qf4lbrpncpwaRi1rbejq9/IA41P7sI9GCK/ViuBKHK8nb2r1QWX4shMh+7cBepO2H2yIdp+cTGhtdk7VNUwCNc0ZBU8p2X9kQJZ2o3arDthmPtpMzrw36OW0ZtgRuFLxPggHcWS0pOpACIbe8WrytVwhvz650NcdBqa2yLMRDHNyleStJeMwP3E6AmrVcADUkHRpZtoFFfh+Sfc2C+zJmj841JWawNjnzYOMEbQUSqkfOsVHlvbRwnMyUgx/fnjCtV8u1zfv4ukXA=
+before_install:
+- openssl aes-256-cbc -K $encrypted_786a2a24496e_key -iv $encrypted_786a2a24496e_iv
+  -in identity.enc -out identity -d
