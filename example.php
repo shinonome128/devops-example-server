@@ -4,7 +4,7 @@
   $data = array(
       // ISO8601 format
       'date'=> $now->format("c")
-      // 'msg' => "Updated"  // この行を追加
+      'msg' => "Updated"  // この行を追加
   );
   print(json_encode($data));
   ?>
